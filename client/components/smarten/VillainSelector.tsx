@@ -42,19 +42,19 @@ export default function VillainSelector({ onContinue }: VillainSelectorProps) {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex items-center justify-center p-6">
-        <div className="w-full max-w-md">
+      <div className="flex-1 flex items-center justify-center p-4 md:p-8">
+        <div className="w-full max-w-md bg-white rounded-xl shadow-sm p-8">
           {/* Welcome Section */}
-          <div className="mb-12 text-center md:text-left">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                <span className="text-2xl">🧬</span>
+          <div className="mb-10">
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span className="text-3xl">🧬</span>
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">
+                <h1 className="text-2xl font-bold text-gray-900 leading-tight">
                   Welcome to SMARTen
                 </h1>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-500 mt-1">
                   Select Your Villain and Create a Test
                 </p>
               </div>
@@ -63,7 +63,7 @@ export default function VillainSelector({ onContinue }: VillainSelectorProps) {
 
           {/* Villain Selection */}
           <div className="mb-8">
-            <h2 className="text-lg font-semibold text-gray-900 mb-2">
+            <h2 className="text-base font-semibold text-gray-900 mb-1">
               Select Your Villain
             </h2>
             <p className="text-sm text-gray-500 mb-6">
@@ -71,22 +71,22 @@ export default function VillainSelector({ onContinue }: VillainSelectorProps) {
             </p>
 
             {/* Villain Cards */}
-            <div className="space-y-4 mb-8">
+            <div className="space-y-3 mb-8">
               {villains.map((villain) => (
                 <button
                   key={villain.id}
                   onClick={() =>
                     setSelectedVillain(villain.id as "ebola" | "covid" | "hiv")
                   }
-                  className={`w-full p-6 border-2 rounded-lg transition-all ${
+                  className={`w-full p-6 border-2 rounded-lg transition-all cursor-pointer ${
                     selectedVillain === villain.id
                       ? "border-blue-600 bg-blue-50"
-                      : "border-gray-200 bg-white hover:border-gray-300"
+                      : "border-gray-200 bg-gray-50 hover:bg-white hover:border-gray-300"
                   }`}
                 >
-                  <div className="flex flex-col items-center gap-4">
-                    <span className="text-6xl">{villain.icon}</span>
-                    <span className="font-semibold text-gray-900">
+                  <div className="flex flex-col items-center gap-3">
+                    <span className="text-5xl">{villain.icon}</span>
+                    <span className="font-semibold text-gray-900 text-sm">
                       {villain.name}
                     </span>
                   </div>
@@ -96,17 +96,21 @@ export default function VillainSelector({ onContinue }: VillainSelectorProps) {
           </div>
 
           {/* Continue Button */}
-          <Button
+          <button
             onClick={() => {
               if (selectedVillain) {
                 onContinue(selectedVillain);
               }
             }}
             disabled={!selectedVillain}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold"
+            className={`w-full py-3 px-4 rounded-lg font-semibold text-white transition-all ${
+              selectedVillain
+                ? "bg-blue-600 hover:bg-blue-700 cursor-pointer"
+                : "bg-blue-400 cursor-not-allowed"
+            }`}
           >
             Continue
-          </Button>
+          </button>
         </div>
       </div>
     </div>
