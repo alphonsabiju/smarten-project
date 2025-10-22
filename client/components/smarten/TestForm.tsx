@@ -61,26 +61,26 @@ export default function TestForm({
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex items-center justify-center p-6">
-        <div className="w-full max-w-2xl">
+      <div className="flex-1 flex items-center justify-center p-4 md:p-8">
+        <div className="w-full max-w-md bg-white rounded-xl shadow-sm p-8">
           {/* Back Button */}
           <button
             onClick={onBack}
-            className="flex items-center gap-2 text-gray-600 hover:text-gray-900 mb-6 font-medium"
+            className="flex items-center gap-2 text-gray-600 hover:text-gray-900 mb-6 font-medium text-sm"
           >
-            <ChevronLeft size={20} />
+            <ChevronLeft size={18} />
             UB CSE SMARTen
           </button>
 
           {/* Title */}
           <div className="mb-8">
-            <div className="flex items-center gap-3 mb-2">
-              <span className="text-3xl">{villain.icon}</span>
+            <div className="flex items-start gap-4">
+              <span className="text-3xl flex-shrink-0">{villain.icon}</span>
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">
+                <h1 className="text-xl font-bold text-gray-900 leading-tight">
                   Selected Villain: {villain.name}
                 </h1>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-500 mt-1">
                   {villain.description}
                 </p>
               </div>
@@ -99,7 +99,7 @@ export default function TestForm({
                 value={testName}
                 onChange={(e) => onTestNameChange(e.target.value)}
                 placeholder="Enter test name"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm"
               />
               <p className="text-xs text-gray-500 mt-1">
                 Default: {villain.name} Test
@@ -116,8 +116,8 @@ export default function TestForm({
                 onChange={(e) => onDnaFragmentChange(e.target.value.slice(0, 80))}
                 placeholder={defaultFragment}
                 maxLength={80}
-                rows={4}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent font-mono text-sm"
+                rows={3}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent font-mono text-sm resize-none"
               />
               <p className="text-xs text-gray-500 mt-1">
                 You can edit this fragment as needed.
@@ -125,23 +125,19 @@ export default function TestForm({
             </div>
 
             {/* Buttons */}
-            <div className="space-y-3 pt-4">
-              <Button
+            <div className="space-y-3 pt-2">
+              <button
                 onClick={onReset}
-                variant="outline"
-                className="w-full py-3 text-base font-semibold border-2 border-gray-300 hover:bg-gray-100"
+                className="w-full py-3 px-4 border-2 border-gray-300 rounded-lg text-gray-900 font-semibold hover:bg-gray-50 transition-all text-sm"
               >
                 Reset
-              </Button>
-              <Button
-                variant="outline"
-                className="w-full py-3 text-base font-semibold border-2 border-gray-300 hover:bg-gray-100"
-              >
+              </button>
+              <button className="w-full py-3 px-4 border-2 border-gray-300 rounded-lg text-gray-900 font-semibold hover:bg-gray-50 transition-all text-sm">
                 Save Draft
-              </Button>
-              <Button className="w-full bg-black hover:bg-gray-900 text-white py-3 text-base font-semibold rounded-lg">
+              </button>
+              <button className="w-full bg-black hover:bg-gray-900 text-white py-3 px-4 rounded-lg font-semibold transition-all text-sm">
                 Run Test
-              </Button>
+              </button>
             </div>
           </div>
         </div>
