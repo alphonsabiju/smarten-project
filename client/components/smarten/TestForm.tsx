@@ -112,7 +112,9 @@ export default function TestForm({
               </label>
               <textarea
                 value={dnaFragment}
-                onChange={(e) => onDnaFragmentChange(e.target.value.slice(0, 80))}
+                onChange={(e) =>
+                  onDnaFragmentChange(e.target.value.slice(0, 80))
+                }
                 placeholder={defaultFragment}
                 maxLength={80}
                 rows={3}
