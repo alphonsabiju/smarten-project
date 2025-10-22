@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 
 interface VillainSelectorProps {
   onContinue: (villain: "ebola" | "covid" | "hiv") => void;
