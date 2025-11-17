@@ -466,13 +466,18 @@
             const runBtn = document.getElementById('runBtn');
             
             // DNA sequences for each virus
-            const dnaSequences = {
-                Ebola: generateDnaSequence(500),
-                Flu: generateDnaSequence(500),
-                Zika: generateDnaSequence(500),
-                COVID:generateDnaSequence(500),
-                AIDS:generateDnaSequence(500)
-            };
+            const dnaSequences = {};
+
+            async function loadFasta(name){
+                const response = await fetch(`fasta/${name}.fasta`);
+                const text = await response.text();
+                // Remove header line(s) that begin with '>'
+                return text
+                    .split("\n")
+                    .filter(line => !line.startsWith(">"))
+                    .join("").replace(/[^ATCG]/g, '')
+                    .trim();
+            }
 
             
             // Selected villain variable
@@ -533,19 +538,25 @@
                 originalSelectedFragment = currentDnaSequence.substring(sliderValue, sliderValue + SELECTION_LENGTH);
                 
                 // Only update the selected DNA if it hasn't been modified by the user
-                if (selectedDna.value === '' || selectedDna.value === originalSelectedFragment) {
-                    selectedDna.value = originalSelectedFragment;
-                    charCount.textContent = originalSelectedFragment.length;
-                    warningText.textContent = '';
+                //if (selectedDna.value === '' || selectedDna.value === originalSelectedFragment) {
+               selectedDna.value = originalSelectedFragment;
+                charCount.textContent = originalSelectedFragment.length;
+                warningText.textContent = '';
+
+/*
                 } else {
                     // Show warning that the fragment has been modified
                     warningText.textContent = 'Note: This fragment has been modified from the original sequence';
                 }
+                */
+                
+
+
             }
             
             // Villain selection functionality
             villainOptions.forEach(option => {
-                option.addEventListener('click', function() {
+                option.addEventListener('click', async function() {
                     // Remove active class from all options
                     villainOptions.forEach(opt => opt.classList.remove('active'));
                     
@@ -560,6 +571,10 @@
                     
                     // Update test name based on selected villain
                     testNameInput.value = `${selectedVillain} Test`;
+
+                    if (!dnaSequences[selectedVillain]){
+                        dnaSequences[selectedVillain]=await loadFasta(selectedVillain);
+                    }
                     
                     // Update DNA sequence
                     currentDnaSequence = dnaSequences[selectedVillain];
@@ -631,9 +646,27 @@
                 alert('Test is now running with the selected DNA fragment...');
                 // In a real application, this would trigger the test execution
             });
+
+
+            async function loadAllFastaFiles() {
+            dnaSequences.Ebola = await loadFasta("Ebola");
+            dnaSequences.Flu   = await loadFasta("Flu");
+            dnaSequences.Zika  = await loadFasta("Zika");
+            dnaSequences.COVID = await loadFasta("COVID");
+            dnaSequences.AIDS  = await loadFasta("AIDS");
+        }
+
+        // After DOM is ready, load FASTA files, then auto-select default villain
+        loadAllFastaFiles().then(() => {
+        // OPTIONAL: you can show a loading spinner while this happens
+            document.querySelector('.villain-option[data-villain="Ebola"]').click();
+        });
+
+
+
             
             // Initialize with Ebola selected by default
-            document.querySelector('.villain-option[data-villain="Ebola"]').click();
+            //document.querySelector('.villain-option[data-villain="Ebola"]').click();
         });
     </script>
 </body>
