@@ -11,7 +11,7 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
             background-color: #f5f7fa;
             color: #333;
@@ -26,7 +26,7 @@
             overflow-x: hidden;
         }
 
-        
+
         .container {
             display: flex;
             justify-content: center;
@@ -35,9 +35,9 @@
             height: 100vh;
             margin: 0;
             padding: 0;
-            
+
         }
-        
+
         /* Left Panel Styles */
         .left-panel {
             width: 40%;
@@ -47,43 +47,43 @@
             display: flex;
             flex-direction: column;
         }
-        
+
         .logo {
             font-size: 24px;
             font-weight: bold;
             margin-bottom: 40px;
             color: #3498db;
         }
-        
+
         .welcome-section {
             margin-bottom: 40px;
         }
-        
+
         .welcome-section h1 {
             font-size: 28px;
             margin-bottom: 10px;
         }
-        
+
         .welcome-section p {
             color: #bdc3c7;
             font-size: 16px;
         }
-        
+
         .villain-selection {
             margin-bottom: 30px;
         }
-        
+
         .villain-selection h2 {
             font-size: 20px;
             margin-bottom: 20px;
         }
-        
+
         .villain-options {
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
-        
+
         .villain-option {
             background-color: #34495e;
             border: none;
@@ -110,12 +110,12 @@
             padding: 5px;
 
         }
-        
+
         .villain-option:hover {
             background-color: #3d566e;
             transform: translateY(-2px);
         }
-        
+
         .villain-option.active {
             background-color: #3498db;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -127,7 +127,7 @@
             gap: 12px;
 
         }
-        
+
         .continue-btn {
             background-color: #3498db;
             color: white;
@@ -139,16 +139,16 @@
             transition: background-color 0.3s ease;
             margin-top: auto;
         }
-        
+
         .continue-btn:hover {
             background-color: #2980b9;
         }
-        
+
         .continue-btn:disabled {
             background-color: #7f8c8d;
             cursor: not-allowed;
         }
-        
+
         /* Right Panel Styles */
         .right-panel {
             width: 60%;
@@ -156,43 +156,43 @@
             display: none;
             flex-direction: column;
         }
-        
+
         .panel-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 30px;
         }
-        
+
         .panel-title {
             font-size: 24px;
             font-weight: bold;
             color: #2c3e50;
         }
-        
+
         .selected-villain {
             font-size: 18px;
             color: #7f8c8d;
         }
-        
+
         .test-creation {
             background-color: white;
             border-radius: 10px;
             padding: 25px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         .form-group {
             margin-bottom: 25px;
         }
-        
+
         .form-group label {
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
             color: #2c3e50;
         }
-        
+
         .test-name-input {
             width: 100%;
             padding: 12px 15px;
@@ -200,17 +200,17 @@
             border-radius: 6px;
             font-size: 16px;
         }
-        
+
         .full-dna-section {
             margin-bottom: 25px;
         }
-        
+
         .full-dna-label {
             display: flex;
             justify-content: space-between;
             margin-bottom: 8px;
         }
-        
+
         .full-dna {
             width: 100%;
             height: 80px;
@@ -223,27 +223,27 @@
             overflow-y: auto;
             line-height: 1.4;
         }
-        
+
         .dna-selector {
             margin: 25px 0;
         }
-        
+
         .selector-header {
             display: flex;
             justify-content: space-between;
             margin-bottom: 10px;
         }
-        
+
         .slider-container {
             position: relative;
             margin-bottom: 15px;
         }
-        
+
         .slider {
             width: 100%;
             height: 30px;
         }
-        
+
         .slider-labels {
             display: flex;
             justify-content: space-between;
@@ -251,11 +251,11 @@
             font-size: 12px;
             color: #7f8c8d;
         }
-        
+
         .selected-dna-section {
             margin-top: 25px;
         }
-        
+
         .selected-dna {
             width: 100%;
             height: 100px;
@@ -267,26 +267,26 @@
             resize: vertical;
             background-color: #f0f8ff;
         }
-        
+
         .char-count {
             text-align: right;
             font-size: 12px;
             color: #7f8c8d;
             margin-top: 5px;
         }
-        
+
         .warning {
             color: #e74c3c;
             font-size: 12px;
             margin-top: 5px;
         }
-        
+
         .button-group {
             display: flex;
             gap: 15px;
             margin-top: 30px;
         }
-        
+
         .btn {
             padding: 12px 25px;
             border: none;
@@ -295,39 +295,39 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        
+
         .reset-btn {
             background-color: #e74c3c;
             color: white;
         }
-        
+
         .reset-btn:hover {
             background-color: #c0392b;
         }
-        
+
         .save-btn {
             background-color: #f39c12;
             color: white;
         }
-        
+
         .save-btn:hover {
             background-color: #d35400;
         }
-        
+
         .run-btn {
             background-color: #2ecc71;
             color: white;
         }
-        
+
         .run-btn:hover {
             background-color: #27ae60;
         }
-        
+
         .highlight {
             background-color: #ffeb3b;
             padding: 2px 0;
         }
-        
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
@@ -335,11 +335,11 @@
                 height: auto;
                 min-height: 100vh;
             }
-            
+
             .left-panel, .right-panel {
                 width: 100%;
             }
-            
+
             .right-panel {
                 padding: 20px;
             }
@@ -351,16 +351,16 @@
         <!-- Left Panel - Villain Selection -->
         <div class="left-panel" id="leftPanel">
             <div class="logo">UB CSE SMARTen</div>
-            
+
             <div class="welcome-section">
                 <h1>Welcome to SMARTen</h1>
                 <p>Select Your Villain and Create a Test</p>
             </div>
-            
+
             <div class="villain-selection">
                 <h2>Select Your Villain</h2>
                 <p>Choose a virus to proceed.</p>
-                
+
                 <div class="villain-options">
                     <button class="villain-option" data-villain="Ebola">
                         <img src="images/Ebola.jpg" alt="Ebola" class="villain-img">
@@ -382,29 +382,29 @@
                         <img src="images/HIV.jpg" alt="AIDS" class="villain-img">
                         AIDS
                     </button>
-                    
+
 
                 </div>
             </div>
-            
+
             <button class="continue-btn" id="continueBtn" disabled>Continue</button>
         </div>
-        
+
         <!-- Right Panel - Test Creation -->
         <div class="right-panel" id="rightPanel">
             <div class="panel-header">
                 <div class="panel-title">UB CSE SMARTen</div>
                 <div class="selected-villain" id="selectedVillainText">Selected Villain: None</div>
             </div>
-            
+
             <div class="test-creation">
                 <h2>Edit the DNA fragment and name your test.</h2>
-                
+
                 <div class="form-group">
                     <label for="testName">Name Your Test</label>
                     <input type="text" id="testName" class="test-name-input" placeholder="Enter test name" value="Ebola Test">
                 </div>
-                
+
                 <div class="full-dna-section">
                     <div class="full-dna-label">
                         <label>Full DNA Sequence</label>
@@ -412,7 +412,7 @@
                     </div>
                     <div id="fullDna" class="full-dna"></div>
                 </div>
-                
+
                 <div class="dna-selector">
                     <div class="selector-header">
                         <label>Select 80-character DNA Fragment</label>
@@ -426,14 +426,14 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="selected-dna-section">
                     <label for="selectedDna">Selected DNA Fragment (80 characters)</label>
                     <textarea id="selectedDna" class="selected-dna" maxlength="80"></textarea>
                     <div class="char-count"><span id="charCount">80</span>/80 characters</div>
                     <div class="warning" id="warningText"></div>
                 </div>
-                
+
                 <div class="button-group">
                     <button class="btn reset-btn" id="resetBtn">Reset Selection</button>
                     <button class="btn save-btn" id="saveBtn">Save Draft</button>
@@ -464,28 +464,42 @@
             const resetBtn = document.getElementById('resetBtn');
             const saveBtn = document.getElementById('saveBtn');
             const runBtn = document.getElementById('runBtn');
-            
+
             // DNA sequences for each virus
-            const dnaSequences = {};
+                // DNA sequences for each virus
+                const dnaSequences = {};
 
-            async function loadFasta(name){
-                const response = await fetch(`fasta/${name}.fasta`);
-                const text = await response.text();
-                // Remove header line(s) that begin with '>'
-                return text
-                    .split("\n")
-                    .filter(line => !line.startsWith(">"))
-                    .join("").replace(/[^ATCG]/g, '')
-                    .trim();
-            }
+                async function loadFasta(name) {
+                    // Call the PHP backend instead of a raw .fasta file
+                    const response = await fetch(`virus.php?name=${encodeURIComponent(name)}`);
+                    if (!response.ok) {
+                        throw new Error(`Failed to load FASTA for ${name}`);
+                    }
 
-            
+                    // Full text of the FASTA file (including header lines)
+                    const text = await response.text();
+
+                    // *** This is what you asked for: store the text file as a string ***
+                    document.virus = text;
+
+                    // Clean it for your DNA display (remove headers and non-ATCG chars)
+                    const cleaned = text
+                        .split("\n")
+                        .filter(line => !line.startsWith(">"))
+                        .join("")
+                        .replace(/[^ATCG]/gi, "")
+                        .trim();
+
+                    return cleaned;
+                }
+
+
             // Selected villain variable
             let selectedVillain = null;
             let currentDnaSequence = '';
             let originalSelectedFragment = '';
             const SELECTION_LENGTH = 80;
-            
+
             // Generate a random DNA sequence
             function generateDnaSequence(length) {
                 const bases = ['A', 'T', 'C', 'G'];
@@ -495,16 +509,16 @@
                 }
                 return sequence;
             }
-            
+
             // Format DNA sequence for display with highlighting
             function formatDnaSequence(sequence, start, end) {
                 let formatted = '';
                 const chunkSize = 50; // Characters per line
-                
+
                 for (let i = 0; i < sequence.length; i += chunkSize) {
                     const chunk = sequence.substring(i, i + chunkSize);
                     let line = '';
-                    
+
                     for (let j = 0; j < chunk.length; j++) {
                         const pos = i + j + 1; // 1-based position
                         if (pos >= start && pos <= end) {
@@ -513,30 +527,30 @@
                             line += chunk[j];
                         }
                     }
-                    
+
                     formatted += line + '\n';
                 }
-                
+
                 return formatted;
             }
-            
+
             // Update DNA display based on slider position
             function updateDnaDisplay() {
                 const sliderValue = parseInt(dnaSlider.value);
                 const start = sliderValue + 1;
                 const end = Math.min(start + SELECTION_LENGTH - 1, currentDnaSequence.length);
-                
+
                 // Update position indicators
                 startPos.textContent = start;
                 endPos.textContent = end;
                 selectionInfo.textContent = `Position: ${start}-${end}`;
-                
+
                 // Update highlighted DNA
                 fullDnaElement.innerHTML = formatDnaSequence(currentDnaSequence, start, end);
-                
+
                 // Update selected DNA fragment
                 originalSelectedFragment = currentDnaSequence.substring(sliderValue, sliderValue + SELECTION_LENGTH);
-                
+
                 // Only update the selected DNA if it hasn't been modified by the user
                 //if (selectedDna.value === '' || selectedDna.value === originalSelectedFragment) {
                selectedDna.value = originalSelectedFragment;
@@ -549,76 +563,76 @@
                     warningText.textContent = 'Note: This fragment has been modified from the original sequence';
                 }
                 */
-                
+
 
 
             }
-            
+
             // Villain selection functionality
             villainOptions.forEach(option => {
                 option.addEventListener('click', async function() {
                     // Remove active class from all options
                     villainOptions.forEach(opt => opt.classList.remove('active'));
-                    
+
                     // Add active class to clicked option
                     this.classList.add('active');
-                    
+
                     // Set selected villain
                     selectedVillain = this.getAttribute('data-villain');
-                    
+
                     // Enable continue button
                     continueBtn.disabled = false;
-                    
+
                     // Update test name based on selected villain
                     testNameInput.value = `${selectedVillain} Test`;
 
                     if (!dnaSequences[selectedVillain]){
                         dnaSequences[selectedVillain]=await loadFasta(selectedVillain);
                     }
-                    
+
                     // Update DNA sequence
                     currentDnaSequence = dnaSequences[selectedVillain];
                     fullDnaLength.textContent = `Length: ${currentDnaSequence.length} characters`;
-                    
+
                     // Update slider max value
                     dnaSlider.max = currentDnaSequence.length - SELECTION_LENGTH;
-                    
+
                     // Reset the selected DNA to the original fragment
                     selectedDna.value = '';
                     warningText.textContent = '';
-                    
+
                     // Update DNA display
                     updateDnaDisplay();
                 });
             });
-            
+
             // Continue button functionality
             continueBtn.addEventListener('click', function() {
                 if (selectedVillain) {
                     // Hide left panel and show right panel
                     leftPanel.style.display = 'none';
                     rightPanel.style.display = 'flex';
-                    
+
                     // Update selected villain text
                     selectedVillainText.textContent = `Selected Villain: ${selectedVillain}`;
                 }
             });
-            
+
             // DNA slider functionality
             dnaSlider.addEventListener('input', updateDnaDisplay);
-            
+
             // Selected DNA fragment character count and validation
             selectedDna.addEventListener('input', function() {
                 const count = this.value.length;
                 charCount.textContent = count;
-                
+
                 // Change color if approaching limit
                 if (count >= SELECTION_LENGTH) {
                     charCount.style.color = '#e74c3c';
                 } else {
                     charCount.style.color = '#7f8c8d';
                 }
-                
+
                 // Show warning if modified
                 if (this.value !== originalSelectedFragment) {
                     warningText.textContent = 'Note: This fragment has been modified from the original sequence';
@@ -626,7 +640,7 @@
                     warningText.textContent = '';
                 }
             });
-            
+
             // Reset button functionality
             resetBtn.addEventListener('click', function() {
                 // Reset to the original selected fragment
@@ -635,12 +649,12 @@
                 charCount.style.color = '#7f8c8d';
                 warningText.textContent = '';
             });
-            
+
             // Save draft button functionality
             saveBtn.addEventListener('click', function() {
                 alert('Test draft saved successfully!');
             });
-            
+
             // Run test button functionality
             runBtn.addEventListener('click', function() {
                 alert('Test is now running with the selected DNA fragment...');
@@ -649,9 +663,9 @@
 
 
             async function loadAllFastaFiles() {
-            dnaSequences.Ebola = await loadFasta("Ebola");
-            dnaSequences.Flu   = await loadFasta("Flu");
-            dnaSequences.Zika  = await loadFasta("Zika");
+            dnaSequences.Ebola = await loadFasta("ebola");
+            dnaSequences.Flu   = await loadFasta("flu");
+            dnaSequences.Zika  = await loadFasta("zika");
             dnaSequences.COVID = await loadFasta("COVID");
             dnaSequences.AIDS  = await loadFasta("AIDS");
         }
@@ -664,9 +678,9 @@
 
 
 
-            
+
             // Initialize with Ebola selected by default
-            //document.querySelector('.villain-option[data-villain="Ebola"]').click();
+            document.querySelector('.villain-option[data-villain="Ebola"]').click();
         });
     </script>
 </body>
